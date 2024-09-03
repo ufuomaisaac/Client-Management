@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    /*alias(libs.plugins.compose.compiler)*/
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
 }
@@ -50,13 +51,14 @@ android {
         }
     }
 }
-
 /*composeCompiler {
     enableStrongSkippingMode = true
 
     reportsDestination = layout.buildDirectory.dir("compose_compiler")
     stabilityConfigurationFile = rootProject.layout.projectDirectory.file("stability_config.conf")
 }*/
+
+
 
 
 kapt {
