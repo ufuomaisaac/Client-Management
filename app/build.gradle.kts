@@ -82,26 +82,16 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
 
-  /*  //Compose
-    implementation("androidx.compose.material:material:1.6.8")
-    implementation ("androidx.compose.foundation:foundation")
-    // or only import the main APIs for the underlying toolkit systems,
-    // such as input and measurement/layout
-    implementation ("androidx.compose.ui:ui")
-    // Optional - Included automatically by material, only add when you need
-    // the icons but not the material library (e.g. when using Material3 or a
-    // custom design system based on Foundation)
-    implementation ("androidx.compose.material:material-icons-core")
-    // Optional - Add full set of material icons
-    implementation("androidx.compose.material:material-icons-extended")
-    // Optional - Add window size utils
-    implementation ("androidx.compose.material3.adaptive:adaptive")
-    implementation ("androidx.activity:activity-compose:1.9.0")
-    // Optional - Integration with ViewModels
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
-    // Optional - Integration with LiveData
-    implementation ("androidx.compose.runtime:runtime-livedata")
-*/
+/*    val composeBom = platform("androidx.compose:compose-bom:2024.06.00")
+    implementation(composeBom)
+    androidTestImplementation(composeBom)
+
+
+    implementation("androidx.compose.material:material")
+    implementation("androidx.compose.foundation:foundation")
+    implementation("androidx.compose.material:material-icons-core")
+    implementation("androidx.compose.material:material-icons-extended")*/
+
 
 
     // Hilt
@@ -130,4 +120,4 @@ dependencies {
     // Test
     testImplementation("junit:junit:4.13.2")
 }
-// Allow references to generated code
+
