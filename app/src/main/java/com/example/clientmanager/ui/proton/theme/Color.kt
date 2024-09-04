@@ -1,4 +1,4 @@
-package com.example.clientmanager.ui.theme
+package com.example.clientmanager.ui.proton.theme
 
 import androidx.compose.ui.graphics.Color
 

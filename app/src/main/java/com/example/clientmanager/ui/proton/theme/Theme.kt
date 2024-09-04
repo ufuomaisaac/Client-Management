@@ -1,4 +1,4 @@
-package com.example.clientmanager.ui.theme
+package com.example.clientmanager.ui.proton.theme
 
 import android.app.Activity
 import android.os.Build
