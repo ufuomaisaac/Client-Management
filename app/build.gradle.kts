@@ -78,15 +78,15 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
-/*    val composeBom = platform("androidx.compose:compose-bom:2024.06.00")
+/*
+    val composeBom = platform("androidx.compose:compose-bom:2024.04.01")
     implementation(composeBom)
-    androidTestImplementation(composeBom)
-
-    implementation("androidx.compose.material:material")
-    implementation("androidx.compose.foundation:foundation")
-    implementation("androidx.compose.material:material-icons-core")
-    implementation("androidx.compose.material:material-icons-extended")*/
+    androidTestImplementation(composeBom)*/
+/*
+    implementation(libs.androidx.material)
+    implementation(libs.androidx.foundation)
+    implementation(libs.androidx.material.icons.core)
+    implementation(libs.androidx.material.icons.extended)*/
 
     // Hilt
     implementation(libs.hilt.android)

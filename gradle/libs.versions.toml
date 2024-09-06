@@ -11,14 +11,11 @@ junitVersion = "1.1.5"
 espressoCore = "3.5.1"
 lifecycleRuntimeKtx = "2.6.1"
 activityCompose = "1.8.0"
-composeBom = "2024.04.01"
-composeBomm = "2024.06.00"
-hilt = "2.44"
+composeBom = "2024.09.00"
 loggingInterceptor = "4.12.0"
 navigationCompose = "2.7.7"
 okhttp = "4.12.0"
 retrofit = "2.11.0"
-retrofit2 = "2.11.0"
 rxandroid = "3.0.2"
 rxjava = "3.1.8"
 rxkotlin = "3.0.1"
@@ -30,6 +27,10 @@ timber = "5.0.1"
 [libraries]
 adapter-rxjava3 = { module = "com.squareup.retrofit2:adapter-rxjava3", version.ref = "converterGson" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-foundation = { module = "androidx.compose.foundation:foundation" }
+androidx-material = { module = "androidx.compose.material:material" }
+androidx-material-icons-core = { module = "androidx.compose.material:material-icons-core" }
+androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
