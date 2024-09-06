@@ -3,7 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     /*alias(libs.plugins.compose.compiler)*/
     id("kotlin-kapt")
-    id("com.google.dagger.hilt.android")
+    //id("com.google.dagger.hilt.android")
+    alias(libs.plugins.dagger.hilt)
 }
 
 android {
@@ -58,15 +59,11 @@ android {
     stabilityConfigurationFile = rootProject.layout.projectDirectory.file("stability_config.conf")
 }*/
 
-
-
-
 kapt {
     correctErrorTypes = true
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -83,43 +80,40 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-
 /*    val composeBom = platform("androidx.compose:compose-bom:2024.06.00")
     implementation(composeBom)
     androidTestImplementation(composeBom)
-
 
     implementation("androidx.compose.material:material")
     implementation("androidx.compose.foundation:foundation")
     implementation("androidx.compose.material:material-icons-core")
     implementation("androidx.compose.material:material-icons-extended")*/
 
-
-
     // Hilt
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
 
     // Network
-    implementation("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
-    implementation("com.squareup.retrofit2:adapter-rxjava3:2.11.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    implementation("com.google.code.gson:gson:2.11.0")
-    implementation("io.reactivex.rxjava3:rxjava:3.1.8")
-    implementation("io.reactivex.rxjava3:rxkotlin:3.0.1")
-    implementation("io.reactivex.rxjava3:rxandroid:3.0.2")
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.adapter.rxjava3)
+    implementation(libs.logging.interceptor)
+    implementation(libs.okhttp)
+    implementation(libs.gson)
+    implementation(libs.rxjava)
+    implementation(libs.rxkotlin)
+    implementation(libs.rxandroid)
 
     // Navigation
     val nav_version = "2.7.7"
-    implementation("androidx.navigation:navigation-compose:$nav_version")
+    implementation(libs.androidx.navigation.compose)
 
     // Timber
-    implementation("com.jakewharton.timber:timber:5.0.1")
-    implementation("io.coil-kt:coil-compose:2.6.0")
+    implementation(libs.timber)
+    implementation(libs.coil.compose)
 
     // Test
-    testImplementation("junit:junit:4.13.2")
+    testImplementation(libs.junit)
 }
 
