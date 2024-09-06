@@ -1,10 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    /*alias(libs.plugins.compose.compiler)*/
-    id("kotlin-kapt")
-    //id("com.google.dagger.hilt.android")
+    alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.dagger.hilt)
+    /*alias(libs.plugins.compose.compiler)*/
 }
 
 android {
@@ -90,7 +89,6 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended")*/
 
     // Hilt
-
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
 
@@ -106,7 +104,6 @@ dependencies {
     implementation(libs.rxandroid)
 
     // Navigation
-    val nav_version = "2.7.7"
     implementation(libs.androidx.navigation.compose)
 
     // Timber
