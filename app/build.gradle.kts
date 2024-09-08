@@ -78,6 +78,9 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Startup
+    implementation(libs.androidx.startup.runtime)
 /*
     val composeBom = platform("androidx.compose:compose-bom:2024.04.01")
     implementation(composeBom)
