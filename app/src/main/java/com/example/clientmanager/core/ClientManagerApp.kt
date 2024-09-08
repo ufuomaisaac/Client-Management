@@ -1,5 +1,7 @@
 package com.example.clientmanager.core
 
-//use hilt here
-class ClientManagerApp {
-}
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class ClientManagerApp: Application()
