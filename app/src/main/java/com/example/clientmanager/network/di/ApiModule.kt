@@ -1,5 +1,6 @@
 package com.example.clientmanager.network.di
 
+import com.example.clientmanager.utility.constants.Constants.CLIENT_MANAGER_BASE_URL
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -19,9 +20,9 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 
-@Module(includes = [
+@Module(/*includes = [
     NetworkModule::class
-])
+]*/)
 
 @InstallIn(SingletonComponent::class)
 class ApiModule {
@@ -43,7 +44,7 @@ class ApiModule {
         @Named("BaseOkHttp") okhttp: OkHttpClient,
     ): Retrofit = builder
         .client(okhttp)
-        .baseUrl(CLIINT_MANAGER_BASE_URL)
+        .baseUrl(CLIENT_MANAGER_BASE_URL)
         .build()
 
 
@@ -54,7 +55,7 @@ class ApiModule {
         @Named("InterceptedOkHttp") okhttp: OkHttpClient,
     ): Retrofit = builder
         .client(okhttp)
-        .baseUrl(SPOTIFY_BASE_URL)
+        .baseUrl(CLIENT_MANAGER_BASE_URL)
         .build()
 
     @Provides
