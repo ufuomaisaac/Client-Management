@@ -20,10 +20,7 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 
-@Module(/*includes = [
-    NetworkModule::class
-]*/)
-
+@Module()
 @InstallIn(SingletonComponent::class)
 class ApiModule {
 
@@ -34,18 +31,6 @@ class ApiModule {
         .Builder()
         .addCallAdapterFactory(callAdapterFactory)
         .addConverterFactory(converterFactory)
-
-
-    @Provides
-    @Singleton
-    @Named("Auth_Retrofit")
-    internal fun provideAuthRetrofit(
-        builder: Retrofit.Builder,
-        @Named("BaseOkHttp") okhttp: OkHttpClient,
-    ): Retrofit = builder
-        .client(okhttp)
-        .baseUrl(CLIENT_MANAGER_BASE_URL)
-        .build()
 
 
     @Provides
